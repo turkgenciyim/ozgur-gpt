@@ -27,7 +27,7 @@ const Pricing = () => {
   return (
     <div
       id="ucretlendirme"
-      className="px-4 py-12 bg-black border-t-4 bg-gradient-to-br from-gray-900 to-slate-900/80 border-t-green-500"
+      className="px-4 py-12 overflow-hidden bg-black border-t-4 bg-gradient-to-r from-gray-950 to-emerald-900/80 border-t-green-500"
     >
       <div className="max-w-4xl mx-auto">
         <div>
@@ -46,7 +46,7 @@ const Pricing = () => {
             sağlayacağımız özellikleri tek bir pakette topladık, işte ÖzgürGPT+
           </p>
         </div>
-        <div className="flex flex-col items-center justify-start h-screen mt-10">
+        <div className="flex flex-col items-center justify-start min-h-screen mt-10">
           <Tab.Group>
             <Tab.List
               className={
@@ -83,7 +83,7 @@ const Pricing = () => {
               </Tab>
             </Tab.List>
             <Tab.Panels>
-              <Tab.Panel className="max-w-sm p-6 duration-300 border border-gray-800 rounded-xl bg-gradient-to-b hover:border-emerald-800/50 from-slate-900 via-slate-900 to-slate-950/30 group/panel">
+              <Tab.Panel className="max-w-sm p-6 duration-300 border border-emerald-800 rounded-xl bg-gradient-to-b hover:border-emerald-800/50 from-slate-900 via-slate-900 to-slate-950/30 group/panel">
                 <div className="flex">
                   <div className="px-3 py-2 text-xs transition-all border rounded-full shadow group-hover/panel:bg-green-600 group-hover/panel:border-green-500 group-hover/panel:text-white border-slate-700 text-slate-300 bg-slate-50/10">
                     Herkese İçin
@@ -222,7 +222,7 @@ const Pricing = () => {
                 </button>
               </Tab.Panel>
               <Tab.Panel className="p-1.5 rounded-xl bg-gradient-to-tr from-emerald-400 via-green-700 to-emerald-500">
-                <div className="max-w-sm p-6 duration-300 bg-black border border-transparent rounded-xl bg-gradient-to-t hover:border-emerald-800/50 from-slate-500/5 via-slate-500/10 to-green-950/80 group/panel">
+                <div className="max-w-md p-6 duration-300 bg-black border border-transparent xs:p-8 sm:p-12 rounded-xl bg-gradient-to-t hover:border-emerald-800/50 from-slate-500/5 via-slate-500/10 to-green-950/80 group/panel">
                   <div className="flex">
                     <div className="px-6 py-2 text-xs text-white transition-all border border-green-500 rounded-full shadow bg-gradient-to-r from-green-500 via-green-700 to-emerald-600">
                       Premium
@@ -230,9 +230,9 @@ const Pricing = () => {
                   </div>
                   <div className="mt-8 space-y-3">
                     <h3 className="text-5xl font-semibold tracking-tight text-transparent bg-gradient-to-tr bg-clip-text from-green-500 via-emerald-50 to-emerald-200">
-                      125₺ <span className="text-sm text-slate- ">/</span>{" "}
+                      180₺ <span className="text-sm text-slate- ">/</span>{" "}
                       <sub className="text-sm font-normal tracking-tighter text-green-200/70">
-                        30 gün
+                        Sınırsız Üyelik
                       </sub>
                     </h3>
                     <p className="text-sm max-w-[18rem]  text-slate-400 text-opacity-80">
@@ -250,8 +250,8 @@ const Pricing = () => {
                     </div>
                   </div>
                   <div className="w-full h-[1px] my-6 bg-slate-800 drop-shadow shadow"></div>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-2">
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="flex items-center flex-1 space-x-2 basis-1/2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -270,7 +270,7 @@ const Pricing = () => {
                         Lorem, ipsum dolor.
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center flex-1 space-x-2 basis-1/2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -289,7 +289,7 @@ const Pricing = () => {
                         Lorem, ipsum dolor.
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center flex-1 space-x-2 basis-1/2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -308,7 +308,7 @@ const Pricing = () => {
                         Lorem, ipsum dolor.
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center flex-1 space-x-2 basis-1/2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -327,7 +327,7 @@ const Pricing = () => {
                         Lorem, ipsum dolor.
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center flex-1 space-x-2 basis-1/2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -346,7 +346,7 @@ const Pricing = () => {
                         Lorem, ipsum dolor.
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center flex-1 space-x-2 basis-1/2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -365,7 +365,7 @@ const Pricing = () => {
                         Lorem, ipsum dolor.
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center flex-1 space-x-2 basis-1/2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -384,7 +384,7 @@ const Pricing = () => {
                         Lorem, ipsum dolor.
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center flex-1 space-x-2 basis-1/2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
