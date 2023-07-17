@@ -15,7 +15,7 @@ const HeaderSlogan = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center max-w-4xl p-4 mx-auto lg:mt-24">
-      <h1 className="mb-4 text-4xl font-bold tracking-tighter text-center text-transparent text-white xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-tr from-green-100 to-green-200 bg-clip-text ">
+      <h1 className="mb-4 text-4xl font-bold tracking-tighter text-center text-emerald-800 dark:text-white xs:text-5xl sm:text-6xl to-emerald md:text-7xl lg:text-8xl">
         <motion.span
           initial={{ filter: "blur(4px)", opacity: 0.7 }}
           animate={{ filter: "blur(0px)", opacity: 1 }}
@@ -24,22 +24,22 @@ const HeaderSlogan = () => {
             stiffness: 260,
             damping: 20,
           }}
-          className="relative inline-block before:bg-gradient-to-tr before:from-emerald-500/50 before:backdrop-blur-sm before:h-1/3 before:bottom-0 before:absolute before:w-full
-               before:to-green-500/20 rounded-3xl before:from-70%"
+          className="relative inline-block before:bg-gradient-to-tr transition-all duration-700 from-emerald-700 dark:before:from-emerald-500/50 before:backdrop-blur-sm before:h-1/4 before:bottom-0 before:absolute before:w-full
+              to-green-600/20 dark:before:to-green-500/20 rounded-3xl before:from-20%"
         >
           Özgürlüğünüzü
         </motion.span>{" "}
         kısıtlamak yerine onu özgür bırakın!
       </h1>
-      <p className="max-w-md mx-auto text-sm font-medium text-center xs:text-base sm:max-w-xl md:max-w-2xl md:text-xl text-slate-100">
+      <p className="max-w-md mx-auto text-sm font-medium text-center transition-all xs:text-base sm:max-w-xl md:max-w-2xl md:text-xl text-slate-600 dark:text-slate-100">
         OpenAI tarafından sunulan GPT-4 yapay zeka teknolojisini kullanan
         ÖzgürGPT şimdi daha fazla özelliğe sahip, hadi sende bunlara göz at!
       </p>
-      <div className="flex flex-wrap items-center justify-center gap-8 px-6 mt-9 mb-44">
-        <button className="py-4 font-medium transition-all px-7 xs:px-12 bg-gradient-to-tr from-green-100 to-emerald-200 via-white rounded-xl opacity-90 hover:opacity-100 ring ring-green-700 hover:ring-emerald-600 active:ring-1">
+      <div className="flex flex-wrap items-center justify-center gap-8 px-6 mb-12 mt-9 xs:mb-44">
+        <button className="py-4 font-medium transition-all duration-500 px-7 xs:px-12 bg-gradient-to-tr from-green-100 to-emerald-200 via-white rounded-xl opacity-90 hover:opacity-100 ring ring-green-700 hover:ring-emerald-600 active:ring-1">
           ÖzgürGPT+ Satın Alın
         </button>
-        <button className="flex items-center space-x-2 text-white transition-all group opacity-80 hover:opacity-100">
+        <button className="flex items-center space-x-2 font-medium transition-800 text-slate-800 dark:text-white group opacity-80 hover:opacity-100">
           <span>Şimdi Özellikleri Keşfet</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

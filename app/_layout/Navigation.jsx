@@ -2,7 +2,8 @@ import Link from "next/link";
 import React, { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { motion } from "framer-motion";
-
+import { useTheme } from "next-themes";
+import SwitchThemeButton from "@/app/_components/SwitchThemeButton";
 const Navigation = () => {
   const icon = {
     hidden: {
@@ -15,37 +16,38 @@ const Navigation = () => {
     },
   };
   return (
-    <nav className="relative z-40 flex flex-col flex-wrap items-center justify-between flex-1 w-full px-6 py-4 mx-auto space-x-4 sm:py-12 xl:px-8 lg:gap-0 lg:flex-row backdrop-blur-sm">
-      <div className="items-center justify-center hidden space-x-12 text-white sm:flex xl:basis-1/3">
+    <nav className="relative z-40 flex flex-col flex-wrap items-center justify-between flex-1 w-full px-6 py-4 mx-auto mb-24 space-x-4 border-b border-green-100 dark:border-green-800 sm:py-12 xl:px-8 lg:gap-0 lg:flex-row backdrop-blur-sm">
+      <SwitchThemeButton />
+      <div className="items-center justify-center hidden space-x-8 sm:flex xl:basis-1/3">
         <Link
-          className="transition-all text-slate-200 hover:text-slate-300"
-          href={"/"}
+          className="transition-all dark:text-slate-200 text-slate-600 hover:text-slate-700 dark:hover:text-slate-300"
+          href={"/ozellikler"}
         >
-          Nasıl Kullanılır?
+          Özellikler
         </Link>
         <Link
-          className="transition-all text-slate-200 hover:text-slate-300"
+          className="transition-all dark:text-slate-200 text-slate-600 hover:text-slate-700 dark:hover:text-slate-300"
           href={"/#ucretlendirme"}
         >
           Ücretlendirme
         </Link>
         <Menu as="div" className="relative block text-right">
           <div>
-            <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium transition-all rounded-md text-slate-200 hover:text-slate-300">
-              Yaratıcılar
+            <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium transition-all rounded-md group dark:text-slate-200 text-slate-600 hover:text-slate-700 dark:hover:text-slate-300">
+              Daha Fazla
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-5 h-5 ml-2 -mr-1 text-violet-200 hover:text-violet-100"
+                className="w-5 h-5 ml-1 transition-all text-emerald-500 group-hover:text-emerald-400 dark:text-emerald-400 dark:group-hover:text-emerald-600"
                 aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+                  d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
                 />
               </svg>
             </Menu.Button>
@@ -59,7 +61,7 @@ const Navigation = () => {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute right-0 z-20 w-56 mt-2 origin-top-right divide-y divide-green-300 rounded-md shadow-lg md:left-0 bg-green-50/95 backdrop-blur-sm ring-2 ring-green-500 focus:outline-none">
+            <Menu.Items className="absolute right-0 z-20 w-56 mt-2 origin-top-right divide-y divide-green-700 rounded-md shadow-lg md:left-0 bg-green-50/95 backdrop-blur-sm ring-2 ring-green-500 focus:outline-none">
               <div className="px-1 py-1">
                 <Menu.Item>
                   {({ active }) => (
@@ -158,10 +160,9 @@ const Navigation = () => {
           </Transition>
         </Menu>
       </div>
-      
-      <h1 className="items-center justify-between my-6 space-x-4 text-5xl font-bold text-center lg:my-0 text-emerald-100">
+      <h1 className="items-center justify-between my-6 space-x-4 text-5xl font-bold text-center transition-all lg:my-0 text-emerald-700 dark:text-emerald-100">
         Özgür
-        <span className="relative inline-block text-transparent bg-gradient-to-tr bg-clip-text from-green-50 via-emerald-500 to-green-300">
+        <span className="relative inline-block text-transparent transition-all bg-gradient-to-tr bg-clip-text from-emerald-500 to-emerald-200 dark:from-green-200 via-emerald-500 dark:to-green-500">
           GPT
         </span>
       </h1>
@@ -177,16 +178,9 @@ const Navigation = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="relative w-5 h-5 transition-all left-2 group-hover:left-4"
+            className="relative w-5 h-5 left-2 group-hover:left-4"
           >
-            <motion.path
-              variants={icon}
-              initial="hidden"
-              animate="visible"
-              transition={{
-                default: { duration: 1, ease: "easeInOut" },
-                fill: { duration: 3, ease: [5, 5, 0.8, 1] },
-              }}
+            <path
               strokeLinecap="round"
               strokeLinejoin="round"
               d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
@@ -194,7 +188,6 @@ const Navigation = () => {
           </svg>
         </button>
       </div>
-      
     </nav>
   );
 };

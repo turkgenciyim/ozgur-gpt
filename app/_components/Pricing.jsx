@@ -27,7 +27,7 @@ const Pricing = () => {
   return (
     <div
       id="ucretlendirme"
-      className="px-4 py-12 overflow-hidden bg-black border-t-4 bg-gradient-to-r from-gray-950 to-emerald-900/80 border-t-green-500"
+      className="px-4 py-12 overflow-hidden bg-white border-t-4 dark:bg-black bg-gradient-to-r from-gray-50 to-emerald-100 dark:from-gray-950 dark:to-emerald-900/80 border-t-green-500"
     >
       <div className="max-w-4xl mx-auto">
         <div>
@@ -37,7 +37,7 @@ const Pricing = () => {
             whileInView="show"
             exit="hide"
             variants={introHeaderVariants}
-            className="mx-auto my-6 text-4xl font-bold tracking-tight text-center text-transparent xs:text-5xl sm:text-6xl bg-clip-text bg-gradient-to-r from-green-50 via-emerald-100 to-green-500/50"
+            className="mx-auto my-6 text-4xl font-bold tracking-tight text-center text-transparent xs:text-5xl sm:text-6xl bg-clip-text bg-gradient-to-r from-green-600 dark:from-green-50 via-emerald-700 dark:via-emerald-100 to-green-400 dark:to-green-500/50"
           >
             İstediğin ÖzgürGPT üyeliğini seç ve hemen başla!
           </motion.h2>
@@ -50,7 +50,7 @@ const Pricing = () => {
           <Tab.Group>
             <Tab.List
               className={
-                "p-2 flex space-x-2 mb-16 bg-emerald-500/20 backdrop-blur rounded-xl justify-center items-center shadow-lg"
+                "p-2 flex space-x-2 mb-16 bg-emerald-700 dark:bg-emerald-500/20 backdrop-blur rounded-xl justify-center items-center shadow-lg"
               }
             >
               <Tab as={Fragment}>
@@ -59,7 +59,7 @@ const Pricing = () => {
                   <button
                     className={`${
                       selected
-                        ? "bg-emerald-700 text-white active:bg-opacity-80 shadow"
+                        ? "bg-emerald-200 dark:bg-emerald-700  text-slate-700 dark:text-white active:bg-opacity-80 shadow"
                         : " bg-transparent text-emerald-300 hover:bg-emerald-500/10 active:bg-green-600"
                     } flex items-center px-7 py-4 font-medium transition-all rounded-xl outline-none`}
                   >
@@ -83,7 +83,7 @@ const Pricing = () => {
               </Tab>
             </Tab.List>
             <Tab.Panels>
-              <Tab.Panel className="max-w-sm p-6 duration-300 border border-emerald-800 rounded-xl bg-gradient-to-b hover:border-emerald-800/50 from-slate-900 via-slate-900 to-slate-950/30 group/panel">
+              <Tab.Panel className="max-w-sm p-6 duration-300 border border-emerald-800 rounded-xl bg-gradient-to-b hover:border-emerald-800/50 from-slate-900 via-slate-900 to-slate-900 dark:to-slate-950/30 group/panel">
                 <div className="flex">
                   <div className="px-3 py-2 text-xs transition-all border rounded-full shadow group-hover/panel:bg-green-600 group-hover/panel:border-green-500 group-hover/panel:text-white border-slate-700 text-slate-300 bg-slate-50/10">
                     Herkese İçin
